@@ -32,7 +32,8 @@ const Blogs = () => {
       */}
       <h1>what are the difference between inline and inline-block element?</h1>
       <p style={{ fontSize: "2rem" }}>
-        The main difference between inline and inline-block elements is that an inline element don't have any effect on setting height and width. 
+        The main difference between inline and inline-block elements is that an
+        inline element don't have any effect on setting height and width.
         Whereas, inline-block element allows to set height and width.
       </p>
     </div>
