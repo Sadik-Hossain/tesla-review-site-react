@@ -5,3 +5,15 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   line-height: 2rem;
 }
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.card-img img {
+  border-radius: 50%;
+}
+.rating-section {
+  margin: 1rem 0;
+}

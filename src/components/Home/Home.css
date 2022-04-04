@@ -7,7 +7,6 @@
   margin: 2rem;
 }
 
-
 .home-container img {
   width: 50%;
 }
@@ -31,8 +30,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
- padding:  20px;
+  padding: 20px;
 }
+.all-btn {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 3rem;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  transition-duration: 0.4s;
+}
+.all-btn:hover{
+  background-color:black;
+  color: white;
+}
+/* *-------meadia query mobile responsive------------------- */
 @media only screen and (max-width: 480px) {
   .home-container {
     display: flex;
@@ -42,12 +55,12 @@
     order: 2;
   }
   .home-container img {
-    width: 100% ;
+    width: 100%;
   }
   .review-section {
     display: grid;
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
-   padding:  20px;
+    padding: 20px;
   }
 }

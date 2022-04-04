@@ -1,11 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import getReviews from "../../hooks/getReviews";
 import Review from "../Review/Review";
 import "./Home.css";
 const url = `https://www.tesla.com/ownersmanual/images/GUID-999EC68D-FD44-4237-8AB8-AB97A724F3B0-online-en-US.png`;
 const Home = () => {
   const [comments, setComments] = getReviews();
-
+  const navigate = useNavigate();
   return (
     <div>
       <div className="home-container">
@@ -17,7 +18,7 @@ const Home = () => {
             and third row seats. The prototype was unveiled at Tesla design
             studios in Los Angeles on February 9, 2012.
           </p>
-          <button>Load More</button>
+          <button className="all-btn">See More</button>
         </div>
         <img src={url} alt="" />
       </div>
@@ -28,7 +29,7 @@ const Home = () => {
         ))}
       </section>
       <div style={{ textAlign: "center" }}>
-        <button>See All Review</button>
+        <button onClick={()=>navigate("/reviews")} className="all-btn">See All Review</button>
       </div>
     </div>
   );
