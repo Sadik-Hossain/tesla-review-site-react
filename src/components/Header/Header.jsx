@@ -8,7 +8,7 @@ const Header = () => {
         to="/home"
         style={({ isActive }) => ({
           color: isActive ? "white" : "black",
-          background:isActive&& "black",
+          background: isActive && "black",
           padding: "20px",
           textDecoration: "none",
           borderBottomStyle: "solid",
@@ -20,7 +20,7 @@ const Header = () => {
       <NavLink
         style={({ isActive }) => ({
           color: isActive ? "white" : "black",
-          background:isActive&& "black",
+          background: isActive && "black",
           padding: "20px",
           textDecoration: "none",
           borderBottomStyle: "solid",
@@ -33,7 +33,7 @@ const Header = () => {
       <NavLink
         style={({ isActive }) => ({
           color: isActive ? "white" : "black",
-          background:isActive&& "black",
+          background: isActive && "black",
           padding: "20px",
           textDecoration: "none",
           borderBottomStyle: "solid",
@@ -46,7 +46,7 @@ const Header = () => {
       <NavLink
         style={({ isActive }) => ({
           color: isActive ? "white" : "black",
-          background:isActive&& "black",
+          background: isActive && "black",
           padding: "20px",
           textDecoration: "none",
           borderBottomStyle: "solid",
@@ -55,19 +55,6 @@ const Header = () => {
         to="/blogs"
       >
         Blogs
-      </NavLink>
-      <NavLink
-        style={({ isActive }) => ({
-          color: isActive ? "white" : "black",
-          background:isActive&& "black",
-          padding: "20px",
-          textDecoration: "none",
-          borderBottomStyle: "solid",
-          borderBottomColor: isActive && "white",
-        })}
-        to="/about"
-      >
-        About
       </NavLink>
     </nav>
   );

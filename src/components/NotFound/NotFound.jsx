@@ -1,9 +1,8 @@
 import React from "react";
-
 const NotFound = () => {
   return (
-    <div>
-      <h1>ERROR:404 Not Found</h1>
+    <div style={{ textAlign: "center" }}>
+      <h1 style={{ color: "red" }}>ERROR:404 Not Found</h1>
     </div>
   );
 };

@@ -1,9 +1,15 @@
 import React from "react";
+import MyAreaChart from "../AreaChart/AreaChart";
+import MyLineChart from "../LineChart/LineChart";
+import "./DashBoard.css";
 
 const DashBoard = () => {
   return (
-    <div>
-      <h1>this is dashboard page</h1>
+    <div className="dashboard">
+     
+        <MyLineChart  />
+        <MyAreaChart />
+     
     </div>
   );
 };

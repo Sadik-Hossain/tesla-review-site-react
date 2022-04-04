@@ -1,0 +1,13 @@
+.dashboard {
+  margin: 5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  justify-items: center;
+}
+@media only screen and (max-width: 480px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
