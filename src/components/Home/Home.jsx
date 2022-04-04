@@ -6,6 +6,8 @@ import "./Home.css";
 const url = `https://www.tesla.com/ownersmanual/images/GUID-999EC68D-FD44-4237-8AB8-AB97A724F3B0-online-en-US.png`;
 const Home = () => {
   const [comments, setComments] = getReviews();
+  // * only first 3 item will be selected
+  const newComments = comments.slice(0,3)
   const navigate = useNavigate();
   return (
     <div>
@@ -20,16 +22,21 @@ const Home = () => {
           </p>
           <button className="all-btn">See More</button>
         </div>
-        <img src={url} alt="" />
+        <img src={url} alt="tesla model x car" />
       </div>
+      {/* 
+      //* top review section ===================================
+      */}
       <h1 style={{ textAlign: "center" }}>Top Reviews</h1>
       <section className="review-section">
-        {comments.map((comment) => (
+        {newComments.map((comment) => (
           <Review review={comment} key={comment._id} />
         ))}
       </section>
       <div style={{ textAlign: "center" }}>
-        <button onClick={()=>navigate("/reviews")} className="all-btn">See All Review</button>
+        <button onClick={() => navigate("/reviews")} className="all-btn">
+          See All Review
+        </button>
       </div>
     </div>
   );

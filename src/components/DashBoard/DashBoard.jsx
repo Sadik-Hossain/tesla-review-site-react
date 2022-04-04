@@ -6,10 +6,8 @@ import "./DashBoard.css";
 const DashBoard = () => {
   return (
     <div className="dashboard">
-     
-        <MyLineChart  />
-        <MyAreaChart />
-     
+      <MyLineChart />
+      <MyAreaChart />
     </div>
   );
 };
