@@ -1,7 +1,11 @@
 import React from "react";
+import getReviews from "../../hooks/getReviews";
+import Review from "../Review/Review";
 import "./Home.css";
 const url = `https://www.tesla.com/ownersmanual/images/GUID-999EC68D-FD44-4237-8AB8-AB97A724F3B0-online-en-US.png`;
 const Home = () => {
+  const [comments, setComments] = getReviews();
+
   return (
     <div>
       <div className="home-container">
@@ -17,9 +21,15 @@ const Home = () => {
         </div>
         <img src={url} alt="" />
       </div>
+      <h1 style={{ textAlign: "center" }}>Top Reviews</h1>
       <section className="review-section">
-        <h1>Top Reviews</h1>
+        {comments.map((comment) => (
+          <Review review={comment} key={comment._id} />
+        ))}
       </section>
+      <div style={{ textAlign: "center" }}>
+        <button>See All Review</button>
+      </div>
     </div>
   );
 };
