@@ -1,14 +1,74 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 const Header = () => {
   return (
-    <nav className="Header-container">
-      <Link to="/home">Home</Link>
-      <Link to="/reviews">Reviews</Link>
-      <Link to="/dashboard">Dashboard</Link>
-      <Link to="/blogs">Blogs</Link>
-      <Link to="/about">About</Link>
+    <nav className="navbar">
+      <NavLink
+        to="/home"
+        style={({ isActive }) => ({
+          color: isActive ? "white" : "black",
+          background:isActive&& "black",
+          padding: "20px",
+          textDecoration: "none",
+          borderBottomStyle: "solid",
+          borderBottomColor: isActive && "white",
+        })}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => ({
+          color: isActive ? "white" : "black",
+          background:isActive&& "black",
+          padding: "20px",
+          textDecoration: "none",
+          borderBottomStyle: "solid",
+          borderBottomColor: isActive && "white",
+        })}
+        to="/reviews"
+      >
+        Reviews
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => ({
+          color: isActive ? "white" : "black",
+          background:isActive&& "black",
+          padding: "20px",
+          textDecoration: "none",
+          borderBottomStyle: "solid",
+          borderBottomColor: isActive && "white",
+        })}
+        to="/dashboard"
+      >
+        Dashboard
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => ({
+          color: isActive ? "white" : "black",
+          background:isActive&& "black",
+          padding: "20px",
+          textDecoration: "none",
+          borderBottomStyle: "solid",
+          borderBottomColor: isActive && "white",
+        })}
+        to="/blogs"
+      >
+        Blogs
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => ({
+          color: isActive ? "white" : "black",
+          background:isActive&& "black",
+          padding: "20px",
+          textDecoration: "none",
+          borderBottomStyle: "solid",
+          borderBottomColor: isActive && "white",
+        })}
+        to="/about"
+      >
+        About
+      </NavLink>
     </nav>
   );
 };

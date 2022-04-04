@@ -1,7 +1,14 @@
-.Header-container{
+.navbar{
     background:wheat;
     padding-top: 20px;
     display: flex;
     justify-content: space-evenly;
-    
+    background-size: 300%;
+    background-image: var(--gradient);
+    animation: bg-animation 5s infinite;
 }
+@keyframes bg-animation {
+    0% {background-position: left}
+    50% {background-position: right}
+    100% {background-position: left}
+  }
